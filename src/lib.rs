@@ -1,5 +1,3 @@
-#![feature(thread_id_value)]
-
 use js_sys::Array;
 use once_cell::sync::{Lazy, OnceCell};
 use spinning_top::Spinlock;
