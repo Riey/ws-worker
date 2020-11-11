@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script src="pkg/add.js"></script>
+    <script>
+        wasm_bindgen("pkg/add_bg.wasm")
+        .then(() => {
+            wasm_bindgen.init_worker(document.location.protocol + "//" + document.location.host + "/pkg/add.js");
+
+            wasm_bindgen.run_add().then(sum => {
+                console.log("run_add sum: ", sum);
+            });
+            wasm_bindgen.run_add_block().then(sum => {
+                console.log("run_add_block sum:", sum);
+            });
+        });
+    </script>
+</body>
+</html>
