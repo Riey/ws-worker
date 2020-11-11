@@ -1,6 +1,8 @@
 # ws-worker
 spawn worker in rust wasm
 
+This is very *experimental* so don't use it for production
+
 ## Prerequirements
 
 1. need rust flags "-Ctarget-feature=+atomics,+bulk-memory"
